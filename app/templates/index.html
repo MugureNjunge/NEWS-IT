@@ -1,1 +1,10 @@
 <h1>Welcome Home!</h1>
+
+<ul>
+  {% for article in articles %}
+<img src="{{article.urlToImage}}" alt="">
+<h3>{{article.title}}</h3>
+<p>{{article.description}}</p>
+
+  {% endfor%}
+</ul>
