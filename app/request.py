@@ -5,7 +5,7 @@ from .models import news
 News=news.News
 
 api_key = '49750cbf3ad34b9f9e69e796e5b42e8e'
-base_url= 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
+
 
 def get_news():
   get_news_url = base_url.format(api_key)
