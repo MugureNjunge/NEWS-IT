@@ -10,5 +10,5 @@ def index():
   news = get_news()
   return render_template('index.html',articles= news)
 
-  # return render_template('navbar.html')
+
 
