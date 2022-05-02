@@ -38,38 +38,36 @@ def process_results(news_list):
     news_object = News(author, title, description, url, urlToImage, publishedAt, content)
     news_results.append(news_object)
   return news_results  
-
-          
-
   
-# def get_sources():
-#   get_sources_url = sources_url.format(api_key)
+  
+def get_sources():
+  get_sources_url = sources_url.format(api_key)
 
-#   with urllib.request.urlopen(get_sources_url) as url:
-#     get_sources_data = url.read()
-#     get_sources_response = json.loads(get_sources_data)
+  with urllib.request.urlopen(get_sources_url) as url:
+    get_sources_data = url.read()
+    get_sources_response = json.loads(get_sources_data)
 
-#     sources_results = None
+    sources_results = None
 
-#     if get_sources_response['sources']:
-#       sources_results_list = get_sources_response['sources']
-#       news_results = process_results(sources_results_list)
-#   return sources_results
+    if get_sources_response['sources']:
+      sources_results_list = get_sources_response['sources']
+      news_results = process_results(sources_results_list)
+  return sources_results
 
-# def process_results(sources_list):
-#   sources_results = []
-#   for sources_item in sources_list:
-#     id = sources_item.get("id")
-#     name = sources_item.get("name")
-#     description = sources_item.get("description")
-#     url = sources_item.get("url")
-#     category = sources_item.get("category")
-#     language = sources_item.get("language")
-#     country = sources_item.get("country")
+def process_results(sources_list):
+  sources_results = []
+  for sources_item in sources_list:
+    id = sources_item.get("id")
+    name = sources_item.get("name")
+    description = sources_item.get("description")
+    url = sources_item.get("url")
+    category = sources_item.get("category")
+    language = sources_item.get("language")
+    country = sources_item.get("country")
 
-#     sources_object = News(id, name, description, url, category, language, country)
-#     sources_results.append(sources_object)
-#   return sources_results  
+    sources_object = News(id, name, description, url, category, language, country)
+    sources_results.append(sources_object)
+  return sources_results  
 
 
 
