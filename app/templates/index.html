@@ -1,23 +1,39 @@
-<h1>NEWS-IT - Your number 1 home for all NEWS</h1>
+<!DOCTYPE html>
+<div class="news bg-primary">
+  <div class="top bg-warning">
+    <h1>YOUR NUMBER ONE HOME FOR INTERNATIONAL NEWS</h1>
+  </div>
 
-<ul>
-  {% for article in articles %}
-<img src="{{article.urlToImage}}" alt="">
-<h3>{{article.title}}</h3>
-<p><strong>{{article.author}}</strong></p>
-<p>{{article.description}}</p>
-<p>{{article.content}}</p>
-<p><strong>{{article.publishedAt}}</strong></p>
-
-  {% endfor%}
-
-</ul>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
 
 
-<div class="container">
-    <form>
-        <input type="text" name="news_query" placeholder="Search for an article" class="form-control">
-        <input type="submit"  value="Submit" class="btn btn-default">
-    </form>
+    <ul>
+      {% for article in articles %}
+    <img src="{{article.urlToImage}}" alt="">
+    <h3>{{article.title}}</h3>
+    <p><strong>{{article.author}}</strong></p>
+    <p>{{article.description}}</p>
+    <p>{{article.content}}</p>
+    <p><strong>{{article.publishedAt}}</strong></p>
+
+      {% endfor%}
+
+    </ul>
+
+
+    <div class="container">
+        <form>
+            <input type="text" name="news_query" placeholder="Search for an article" class="form-control">
+            <input type="submit"  value="Submit" class="btn btn-default">
+        </form>
+
+    </div>
 
 </div>

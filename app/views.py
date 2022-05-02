@@ -1,7 +1,8 @@
 from flask import render_template
 from app import app
-from .request import get_news, get_sources
+from .request import get_news
 from flask import render_template,request,redirect,url_for
+
 
 @app.route('/')
 
@@ -10,10 +11,10 @@ def index():
   news = get_news()
   return render_template('index.html',articles= news)
 
-def sources():
+# def sources():
   
-  sources = get_sources()
-  return render_template('sources.html', sources= sources)  
+#   sources = get_sources()
+#   return render_template('sources.html', sources= sources)  
  
 
 @app.route('/search/<article_name>')
