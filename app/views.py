@@ -13,7 +13,7 @@ def index():
 def sources():
 
   sources = get_sources()
-  return render_template('sources.html', articles= sources)
+  return render_template('sources.html', sources= sources)
 
 
 
