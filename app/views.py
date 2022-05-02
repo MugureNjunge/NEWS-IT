@@ -4,6 +4,7 @@ from .request import get_news
 from .request import get_sources
 
 @app.route('/')
+
 def index():
 
   news = get_news()

@@ -65,7 +65,7 @@ def process_results(sources_list):
     language = sources_item.get("language")
     country = sources_item.get("country")
 
-    sources_object = News(id, name, description, url, url, category, language, country)
+    sources_object = News(id, name, description, url, category, language, country)
     sources_results.append(sources_object)
   return sources_results  
 
