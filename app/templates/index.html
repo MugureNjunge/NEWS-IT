@@ -4,7 +4,11 @@
   {% for article in articles %}
 <img src="{{article.urlToImage}}" alt="">
 <h3>{{article.title}}</h3>
+<p><strong>{{article.author}}</strong></p>
 <p>{{article.description}}</p>
+<p>{{article.content}}</p>
+<p><strong>{{article.publishedAt}}</strong></p>
 
   {% endfor%}
+
 </ul>
