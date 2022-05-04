@@ -18,7 +18,7 @@ This project was generated with [Python3.8 (Flask)]
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://127.0.0.1:5000`. The app will automatically reload if you change any of the source files.
+Navigate to `http://127.0.0.1:5000`. The app will automatically reload if you change any of the source files.
 
 ## Technologies used
 
